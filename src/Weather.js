@@ -21,8 +21,8 @@ export default function Weather () {
                 <span className="current-temp">
                   <h2 className="day-emoji">❄</h2>
                   <span id="temperature"> 0 </span>
-                  <a href="#" id="celsius"> °C </a> <span id="slash"> |</span>
-                  <a href="#" id="farenheit"> °F</a>
+                  <button className="celsius"> °C </button> <span id="slash"> |</span>
+                  <button className="farenheit"> °F</button>
                 </span>
               </div>
 

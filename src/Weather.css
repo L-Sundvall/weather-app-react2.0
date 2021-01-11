@@ -40,11 +40,13 @@ p {
 #head-emoji {
   width: 60px;
 }
-#celsius {
+.celsius {
   position: relative;
   bottom: 12px;
   color: #6e8097;
   font-size: 12px;
+  border: none;
+  background-color: #f7d5ea;
 }
 
 #celsius:hover {
@@ -56,11 +58,13 @@ p {
   bottom: 12px;
   font-size: 14px;
 }
-#farenheit {
+.farenheit {
   position: relative;
   bottom: 12px;
   color: #6e8097;
   font-size: 12px;
+  border: none;
+  background-color: #f7d5ea;
 }
 
 #farenheit:hover {
