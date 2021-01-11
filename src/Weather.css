@@ -1,0 +1,72 @@
+.head-city {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+li::first-letter {
+  text-transform: capitalize;
+}
+.weather-list {
+  font-size: 14px;
+  padding-left: 20px;
+}
+.current-temp {
+  font-size: 30px;
+  color: #5f6368;
+}
+
+.day-emoji {
+  font-size: 40px;
+}
+.days {
+  padding: 3px;
+  text-align: center;
+}
+p {
+  color: #96a3c5;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+#code-link {
+  color: #86cc4a;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+#head-emoji {
+  width: 60px;
+}
+#celsius {
+  position: relative;
+  bottom: 12px;
+  color: #6e8097;
+  font-size: 12px;
+}
+
+#celsius:hover {
+  text-decoration: none;
+  color: #5f6368;
+}
+#slash {
+  position: relative;
+  bottom: 12px;
+  font-size: 14px;
+}
+#farenheit {
+  position: relative;
+  bottom: 12px;
+  color: #6e8097;
+  font-size: 12px;
+}
+
+#farenheit:hover {
+  text-decoration: none;
+  color: #5f6368;
+}
+.uppdated {
+  font-size: 18px;
+}
