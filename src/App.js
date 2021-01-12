@@ -5,18 +5,18 @@ import Weather from './Weather';
 import Forecast from "./Forecast"
 import Opensource from './Opensource';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
+     <div className="container"> 
      <Weather />
      <Search />
      <Forecast />
     <Opensource />
        
-      </header>
+   </div>
     </div>
   );
 }
 
-export default App;
+
