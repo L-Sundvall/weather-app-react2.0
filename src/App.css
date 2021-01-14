@@ -4,5 +4,7 @@
   border: solid #d6d8dc;
   max-width: 600px;
   padding: 30px;
-  margin: 20px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
 }

@@ -8,22 +8,22 @@ export default function Weather () {
     <div className="card-body">
             <div className="row">
               <div className="col-4">
-                <ul id="time">
-                  <li id="current-day"> Monday</li>
+                <ul className="time">
+                  <li className="current-day"> Monday</li>
                   <li>
-                    <span id="current-hour">14: </span>
-                    <span id="current-minuets">00</span>
+                    <span className="current-hour">14: </span>
+                    <span className="current-minuets">00</span>
                   </li>
                 </ul>
               </div>
 
               <div className="col-4">
-                <span className="current-temp">
+                <div className="current-temp">
                   <h2 className="day-emoji">❄</h2>
                   <span id="temperature"> 0 </span>
                   <button className="celsius"> °C </button> <span id="slash"> |</span>
                   <button className="farenheit"> °F</button>
-                </span>
+                </div>
               </div>
 
               <div className="col-4">
