@@ -12,7 +12,12 @@ export default function Opensource () {
           >
             Open source code</a
           >
-          by Linda Sundvall
+         {" "} by{" "}  <a
+            href="https://www.linkedin.com/in/linda-sundvall-ab241990"
+            target="_blank"
+            rel="noreferrer"
+            id="code-link"
+          >Linda Sundvall</a>
         </p>
     </div>);
 }

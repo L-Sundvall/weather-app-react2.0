@@ -1,11 +1,14 @@
+.Seatch-form {
+  text-align: center;
+}
 .current-button {
   margin-top: 20px;
-  margin-left: 40px;
   background-color: #86cc4a;
   padding: 5px;
   border: solid #86cc4a;
   color: #fff;
   border-radius: 6px;
+  margin-bottom: 20px;
 }
 .current-button:hover {
   border: solid #6e8097;

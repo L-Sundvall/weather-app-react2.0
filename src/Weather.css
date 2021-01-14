@@ -3,7 +3,9 @@
   margin-top: 30px;
   font-size: 30px;
 }
-
+.realFeel {
+  font-size: 11px;
+}
 li {
   list-style: none;
   text-decoration: none;

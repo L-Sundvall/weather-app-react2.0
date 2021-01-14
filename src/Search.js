@@ -3,7 +3,7 @@ import "./Search.css";
 
 export default function Search(){
 return (
-<div>
+<div className="Seatch-form">
             <form>
               <input
                 type="search"
