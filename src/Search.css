@@ -3,9 +3,9 @@
 }
 .current-button {
   margin-top: 20px;
-  background-color: #86cc4a;
+  background-color: #b6ccf0;
   padding: 5px;
-  border: solid #86cc4a;
+  border: solid #74a3ed;
   color: #fff;
   border-radius: 6px;
   margin-bottom: 20px;
@@ -15,7 +15,7 @@
   transition: all 200ms ease;
 }
 .Search-button {
-  background-color: #e635a2;
+  background-color: #b6ccf0;
   border: solid #fac0e5;
   color: #fff;
   border-radius: 6px;
@@ -25,7 +25,7 @@
 .search-input {
   margin-left: 40px;
   width: 250px;
-  border: solid #e635a2;
+  border: solid #74a3ed;
   border-radius: 6px;
   opacity: 0.5;
 }
