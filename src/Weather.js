@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-
+import FormatDate from "./FormatDate";
 export default function Weather () {
-  const [weather, setWeather] = useState({ready: false});
+  const [weatherData, setWeatherData] = useState({ready: false});
  
   function handleResponse(response){
-    console.log(response.data);
-    setWeather({
+    setWeatherData({
     ready: true,
+    time:new Date (response.data.dt * 1000),
     city: response.data.name,
     temperature: Math.round(response.data.main.temp),
     realTemperature: Math.round(response.data.main.feels_like),
@@ -19,18 +19,17 @@ export default function Weather () {
   
  
   }
-  if (weather.ready){
+  if (weatherData.ready){
 return (
         <div>
-    <h1 className="head-city" > {weather.city} </h1>
+    <h1 className="head-city" > {weatherData.city} </h1>
     <div className="card-body">
             <div className="row">
               <div className="col-4">
                 <ul className="time">
                   <li className="current-day"> Monday</li>
                   <li>
-                    <span className="current-hour">14: </span>
-                    <span className="current-minuets">00</span>
+                    <FormatDate date={weatherData.date} />
                   </li>
                 </ul>
               </div>
@@ -38,18 +37,18 @@ return (
               <div className="col-4">
                 <div className="current-temp">
                   <h2 className="day-emoji">❄</h2>
-                  <span id="temperature"> {weather.temperature} </span>
+                  <span id="temperature"> {weatherData.temperature} </span>
                   <button className="celsius"> °C </button> <span id="slash"> |</span>
                   <button className="farenheit"> °F</button>
-                  <div className= "realFeel">(Feels like {weather.realTemperature} °C) </div>
+                  <div className= "realFeel">(Feels like {weatherData.realTemperature} °C) </div>
                 </div>
               </div>
 
               <div className="col-4">
                 <ul className="weather-list">
-                  <li id="conditions">Conditions: {weather.conditions}</li>
-                  <li id="wind-speed">Wind: {weather.wind} km/h</li>
-                  <li id="humidity">Humidity: {weather.humidity}%</li>
+                  <li id="conditions">Conditions: {weatherData.conditions}</li>
+                  <li id="wind-speed">Wind: {weatherData.wind} km/h</li>
+                  <li id="humidity">Humidity: {weatherData.humidity}%</li>
                 </ul>
               </div>
             </div>
