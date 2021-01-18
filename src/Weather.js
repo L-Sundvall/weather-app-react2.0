@@ -5,7 +5,7 @@ import "./Weather.css";
 
 export default function Weather (props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
- const [city, setCity] = useState(props.defaultCity);
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
     setWeatherData({
@@ -23,30 +23,42 @@ export default function Weather (props) {
 
   function handleSubmit(event) {
     event.preventDeafault();
-  Search();
-  }
+    Search();
+   }
 
   function changeCity(event) {
-  setCity(event.target.value);
-  }
+   setCity(event.target.value);
+   }
 
  function Search() {
-const apiKey = "7e499109a815c2c14463aa26aad21ebb";
+  const apiKey = "7e499109a815c2c14463aa26aad21ebb";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=
-    ${city}&appid=${apiKey}&units=metric`;  
- axios.get(apiUrl).then(handleResponse);
+  ${city}&appid=${apiKey}&units=metric`;  
+  axios.get(apiUrl).then(handleResponse);
  }
+ 
+  function currenLocation(event) {
+  navigator.geolocation.getCurrentPosition(searchCurrentLocation);
+  }
+
+  function searchCurrentLocation (position) {
+    let apiKey = "7e499109a815c2c14463aa26aad21ebb";
+    let latitude = position.coords.latitude
+    let longitude = position.coords.longitude
+    let apiUrlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrlPosition).then(<Searching />);
+  }
   
   if (weatherData.ready) {
-return (
+    return (
           <div className="Search-form">
-             <Searching data={weatherData}/>
+           <div className="serchParty">
             <form onSubmit={handleSubmit}>
               <input
                 type="search"
                 placeholder="Search for a city"
-                  className="search-input"
-                  autoFocus ="on"
+                className="search-input"
+                autoFocus ="on"
                 onChange= {changeCity}
                 />
                 
@@ -54,13 +66,15 @@ return (
                type="submit" 
                value="Search" 
                className="Search-button" />
+               <button className="current-button" onClick={currenLocation}>📍</button>
             </form>
-            
-            <button className="current-button">Current position</button>
-          </div> 
- ); 
+       </div>
+       <Searching data={weatherData}/>
+        <hr />  
+        </div> 
+        
+         ); 
   } else { Search();
     return ("loading...");
-  }
- 
-}
+    }
+    }

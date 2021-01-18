@@ -12,3 +12,8 @@
 p {
   text-align: center;
 }
+#code-link {
+  color: #74a3ed;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
+}

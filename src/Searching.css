@@ -1,31 +1,56 @@
-.Seatch-form {
+.conditions {
+  position: relative;
+  right: 40px;
+  top: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+.currentDay {
+  position: relative;
+  right: 40px;
+  top: 15px;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.temperature {
+  font-size: 34px;
+  color: #5f6368;
   text-align: center;
 }
-.current-button {
-  margin-top: 20px;
-  background-color: #b6ccf0;
-  padding: 5px;
-  border: solid #74a3ed;
-  color: #fff;
-  border-radius: 6px;
-  margin-bottom: 20px;
+.current-temp {
+  position: relative;
+  right: -32px;
 }
-.current-button:hover {
-  border: solid #6e8097;
-  transition: all 200ms ease;
+.celsius {
+  position: relative;
+  bottom: 10px;
+  right: 12px;
+  color: #6e8097;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
 }
-.Search-button {
-  background-color: #b6ccf0;
-  border: solid #fac0e5;
-  color: #fff;
-  border-radius: 6px;
-  padding: 7px, 7px;
+#slash {
+  position: relative;
+  bottom: 10px;
+  right: 16px;
+  font-size: 20px;
 }
-
-.search-input {
-  margin-left: 40px;
-  width: 250px;
-  border: solid #74a3ed;
-  border-radius: 6px;
-  opacity: 0.5;
+.farenheit {
+  position: relative;
+  bottom: 10px;
+  right: 18px;
+  color: #6e8097;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+}
+.weather-list {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
