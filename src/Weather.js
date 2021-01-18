@@ -27,12 +27,13 @@ return (
             <div className="row">
               <div className="col-4">
                 <ul className="time">
-                  <li className="current-day"> Monday</li>
+                  <li className="current-day"> </li>
                   <li>
-                    <FormatDate date={weatherData.date} />
+                    <FormatDate date={weatherData.time} />
                   </li>
                 </ul>
               </div>
+
 
               <div className="col-4">
                 <div className="current-temp">
