@@ -16,6 +16,7 @@ export default function Weather (props) {
     conditions: response.data.weather[0].description,
     wind: response.data.wind.speed,
     city: response.data.name,
+    icon: response.data.weather[0].icon,
     realTemperature: Math.round(response.data.main.feels_like),
     });
   }

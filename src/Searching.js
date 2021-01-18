@@ -1,6 +1,7 @@
 import React from "react";
 import "./Searching.css";
 import FormatDate from "./FormatDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Searching (props) {
   return (<div className= "Searching">   
@@ -19,7 +20,7 @@ export default function Searching (props) {
 
               <div className="col-4">
                 <div className="current-temp">
-                  <h2 className="day-emoji">❄</h2>
+                  <WeatherIcon code={props.data.icon} />
                   <span id="temperature"> {props.data.temperature} </span>
                   <button className="celsius"> °C </button> <span id="slash"> |</span>
                   <button className="farenheit"> °F</button>
