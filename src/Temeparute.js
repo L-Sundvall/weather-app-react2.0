@@ -1,0 +1,31 @@
+import React, {useState} from "react";
+
+export default function Temperature(props){
+    const [unit, setUnit] = useState(`celsius`)
+    function convertToCelsius(event){
+        event.preventDefault();
+        setUnit("celsius");
+    }
+    function convertToFahrenheit(event){
+        event.preventDefault();
+        setUnit("Fahrenheit");
+    }
+   if (unit === `celsius`) {
+    return ( 
+                <div>
+      <span className="temperature"> {Math.round(props.celsius)} </span>
+                  <button className="celsius" onClick={convertToCelsius}> °C </button> <span id="slash">|</span>
+                  <button className="farenheit" onClick={convertToFahrenheit}>°F</button>
+                  <div className= "realFeel">(Feels like {props.reelFeel} °C) </div>
+                  </div> );}
+                  else { 
+                      return (
+                      <div>
+                  <span className="temperature"> {Math.round((props.celsius* 9/5) + 32)} </span>
+                  <button className="celsius" onClick={convertToCelsius}> °C </button> <span id="slash">|</span>
+                  <button className="farenheit" onClick={convertToFahrenheit}>°F</button>
+                  <div className= "realFeel">(Feels like {Math.round(props.reelFeel* 9/5) + 32} °C) </div>
+                  </div> ); }
+
+                      }
+                  

@@ -22,7 +22,7 @@ export default function Weather (props) {
   }
 
   function handleSubmit(event) {
-    event.preventDeafault();
+    event.preventDefault();
     Search();
    }
 
@@ -38,6 +38,7 @@ export default function Weather (props) {
  }
  
   function currenLocation(event) {
+    event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
   }
 
@@ -46,7 +47,7 @@ export default function Weather (props) {
     let latitude = position.coords.latitude
     let longitude = position.coords.longitude
     let apiUrlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrlPosition).then(<Searching />);
+    axios.get(apiUrlPosition).then(handleResponse);
   }
   
   if (weatherData.ready) {
