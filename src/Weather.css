@@ -28,7 +28,9 @@ li::first-letter {
 .current-button:hover {
   border: solid black;
 }
-
+.serchParty {
+  text-align: center;
+}
 .Search-button {
   background-color: #b6ccf0;
   border: solid #b6ccf0;

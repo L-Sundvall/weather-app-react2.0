@@ -2,7 +2,7 @@ import React from "react";
 import "./Searching.css";
 import FormatDate from "./FormatDate";
 import WeatherIcon from "./WeatherIcon";
-import Temperature from "./Temeparute";
+import Temperature from "./Temperature";
 
 export default function Searching (props) {
   return (<div className= "Searching">   
