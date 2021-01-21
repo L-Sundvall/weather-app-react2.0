@@ -2,3 +2,13 @@
   padding: 3px;
   text-align: center;
 }
+.weatherForecast canvas {
+  display: block;
+  margin: 0 auto;
+  width: 45px;
+  padding: 10px;
+}
+
+.weatherForecast {
+  text-align: center;
+}
