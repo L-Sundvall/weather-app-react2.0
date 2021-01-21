@@ -49,6 +49,9 @@ export default function Weather (props) {
     let longitude = position.coords.longitude
     let apiUrlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrlPosition).then(handleResponse);
+
+    
+
   }
   
   if (weatherData.ready) {

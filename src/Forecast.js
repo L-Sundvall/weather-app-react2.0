@@ -10,16 +10,26 @@ export default function Forecast(props){
  
 
   function showForecast(response) {
-    console.log(response.data);
     setForecast(response.data);
     setLoaded(true);
   }
 
-  if (loaded) {
+  if (loaded && props.city === forecast.city.name) {
     return (
-      
-         <ForeCastDays data={forecast.list[0]}/>
-    )
+      <div className="row">
+         <div className= "col-3"> 
+         <ForeCastDays data={forecast.list[7]}/>
+         </div>
+          <div className= "col-3"> 
+         <ForeCastDays data={forecast.list[15]}/>
+         </div>
+          <div className= "col-3"> 
+         <ForeCastDays data={forecast.list[23]}/>
+         </div>
+          <div className= "col-3"> 
+         <ForeCastDays data={forecast.list[31]}/>
+         </div>
+    </div>);
 
       
          } else {
@@ -30,4 +40,5 @@ export default function Forecast(props){
     axios.get(apiUrl).then(showForecast);
     return null;
 } 
+
 }
