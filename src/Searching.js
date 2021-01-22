@@ -14,7 +14,7 @@ export default function Searching (props) {
                 <ul className="time">   
                   <li className="currentDay">
                     <FormatDate date={props.data.time} /> </li>
-                    <li className="conditions"> {props.data.conditions}</li>
+                    <li className="conditions"> <strong>{props.data.conditions}</strong></li>
                 </ul>
               </div>
 

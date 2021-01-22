@@ -32,8 +32,8 @@ li::first-letter {
   text-align: center;
 }
 .Search-button {
-  background-color: #b6ccf0;
-  border: solid #b6ccf0;
+  background-color: #edcc85;
+  border: solid #edcc85;
   color: #fff;
   border-radius: 6px;
   padding: 7px, 7px;
@@ -49,7 +49,7 @@ li::first-letter {
 .search-input {
   margin-left: 20px;
   width: 250px;
-  border: solid #74a3ed;
+  border: solid #edcc85;
   border-radius: 6px;
   opacity: 0.5;
 }

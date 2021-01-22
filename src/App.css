@@ -1,5 +1,5 @@
 .App {
-  background-color: #f7d5ea;
+  background-color: #e9ede1;
   border-radius: 4px;
   border: solid #d6d8dc;
   max-width: 600px;
@@ -13,7 +13,7 @@ p {
   text-align: center;
 }
 #code-link {
-  color: #74a3ed;
+  color: #edcc85;
   font-family: "Montserrat", sans-serif;
   font-family: "Oswald", sans-serif;
 }
