@@ -81,6 +81,6 @@ export default function Weather (props) {
         
          ); 
   } else { Search();
-    return ("loading...");
+    return ("Try a lager city");
     }
     }
